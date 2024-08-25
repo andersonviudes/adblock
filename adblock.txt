@@ -1,12 +1,62 @@
-^\b(ad([sxv]?[0-9]*|system)[_.-]|[_.-]ad([sxv]?[0-9]*|system)[_.-])
-^\b((.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-])
-^\b((.+[_.-])?telemetry[_.-])
-^\b(adim(age|g)s?[0-9]*[_.-])
-^\b(adtrack(er|ing)?[0-9]*[_.-])
-^\b(advert(s|is(ing|ements?))?[0-9]*[_.-])
-^\b(aff(iliat(es?|ion|ed))?[_.-])
-^\b(analytics?|banners?|beacons?)[0-9]*[_.-])
-^\b(count(ers?)?[0-9]*[_.-])
-^\bmads\.
-^\bpixels?[-.]
-^\b(stat(s|istics)?[0-9]*[_.-])
+# Bloqueio de domínios de publicidade e rastreamento
+
+\b(ad([sxv]?[0-9]*|system)[_.-]|[_.-]ad([sxv]?[0-9]*|system)[_.-])
+\b((.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-])
+\b((.+[_.-])?telemetry[_.-])
+\b(adim(age|g)s?[0-9]*[_.-])
+\b(adtrack(er|ing)?[0-9]*[_.-])
+\b(advert(s|is(ing|ements?))?[0-9]*[_.-])
+\b(aff(iliat(es?|ion|ed))?[_.-])
+\b(analytics?|banners?|beacons?)[0-9]*[_.-])
+\b(count(ers?)?[0-9]*[_.-])
+\b(mads\.)
+\b(pixels?[-.])
+\b(stat(s|istics)?[0-9]*[_.-])
+
+# Bloqueio de domínios de rastreamento e analytics
+
+\bmetrics?[0-9]*[_.-]
+\btrack(ing)?[0-9]*[_.-]
+\blog[_.-](analy(tics|ze|sis)|events?)
+\bcollect(ion)?[_.-]
+\bdatacollect(ion)?[_.-]
+\btags?[_.-]
+\bpixel[_.-](track|log)[_.-]
+
+# Bloqueio de domínios de anúncios generalizados
+
+\bads?[0-9]*[_.-]
+\bpromo(tions?)?[_.-]
+\bsponsor(ed|ship)?[_.-]
+\bpartner(s|ed)?[_.-]
+\bmedia[-_.]ads?[_.-]
+\bbannerads?[_.-]
+
+# Bloqueio de domínios de afiliados e marketing
+
+\baff(ad|track|iliate|network)[_.-]
+\bcampaign(track|log)[_.-]
+\brefer(ral|ence)[_.-]
+\bcl(ick)?track(er)?[0-9]*[_.-]
+\blead(track|log|collect)[_.-]
+
+# Bloqueio de domínios de redes de anúncios e retargeting
+
+\badserve[r]?.[_.-]
+\badnetwork[_.-]
+\bretarget(ing)?[_.-]
+\bdoubleclick[_.-]
+\bcontext(ad|serve)[_.-]
+
+# Bloqueio de outras técnicas de rastreamento
+
+\bfingerprint(ing)?[_.-]
+\bcookie(track|log)[_.-]
+\bheatmap(track|log)[_.-]
+\bbehavior(alytics|track)[_.-]
+\bsession(track|log)[_.-]
+
+# Exclusões explícitas (negative lookahead)
+
+\b(ad(?!min)[_.-])  # Excluir "admin" de ser bloqueado
+\b(advert(?!orial)[_.-])  # Excluir "advertorial" de ser bloqueado
