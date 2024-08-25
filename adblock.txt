@@ -1,0 +1,12 @@
+^\b(ad([sxv]?[0-9]*|system)[_.-]|[_.-]ad([sxv]?[0-9]*|system)[_.-])
+^\b((.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-])
+^\b((.+[_.-])?telemetry[_.-])
+^\b(adim(age|g)s?[0-9]*[_.-])
+^\b(adtrack(er|ing)?[0-9]*[_.-])
+^\b(advert(s|is(ing|ements?))?[0-9]*[_.-])
+^\b(aff(iliat(es?|ion|ed))?[_.-])
+^\b(analytics?|banners?|beacons?)[0-9]*[_.-])
+^\b(count(ers?)?[0-9]*[_.-])
+^\bmads\.
+^\bpixels?[-.]
+^\b(stat(s|istics)?[0-9]*[_.-])
